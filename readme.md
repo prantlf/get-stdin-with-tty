@@ -1,4 +1,7 @@
-# get-stdin [![Build Status](https://travis-ci.org/sindresorhus/get-stdin.svg?branch=master)](https://travis-ci.org/sindresorhus/get-stdin)
+# get-stdin-with-tty
+
+[![NPM version](https://img.shields.io/npm/v/get-stdin.svg)](https://www.npmjs.com/package/get-stdin-with-tty)
+[![Build Status](https://travis-ci.org/moos/get-stdin.svg?branch=master)](https://travis-ci.org/moos/get-stdin)
 
 > Get [stdin](https://nodejs.org/api/process.html#process_process_stdin) as a string or buffer
 
@@ -6,7 +9,7 @@
 ## Install
 
 ```
-$ npm install --save get-stdin
+$ npm install --save get-stdin-with-tty
 ```
 
 
@@ -14,7 +17,7 @@ $ npm install --save get-stdin
 
 ```js
 // example.js
-const getStdin = require('get-stdin');
+const getStdin = require('get-stdin-with-tty');
 
 getStdin().then(str => {
 	console.log(str);
@@ -46,7 +49,7 @@ In a TTY context, a promise that resolves to an empty buffer is returned.
 
 ### getStdin.tty = true/false
 
-Set global TTY handling.  When true, accepts input from TTY until a new line beginning with Ctrl-d or Ctrl-z (ASCII 04 and 26) is entered. (default = false)
+Set global TTY handling.  When true, accepts input from TTY until a new line beginning with Ctrl-d or Ctrl-z (ASCII 04 and 26) is entered. (default = true)
 
 When enabled for the example above:
 
@@ -60,11 +63,14 @@ foobar
 barfoo
 ```
 
+## Moos Fork
+The [moos fork](https://github.com/moos/get-stdin) includes support for reading stdin from TTY by default.
+
 ## Related
 
 - [get-stream](https://github.com/sindresorhus/get-stream) - Get a stream as a string or buffer
 
-
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
+© [Moos](http://github.com/moos)
