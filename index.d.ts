@@ -1,6 +1,9 @@
 /// <reference types="node"/>
 
 interface Options {
+	/**
+	Enables reading from TTY, which can be anded by ^d or ^z.
+	*/
 	tty?: boolean;
 }
 
@@ -15,7 +18,7 @@ declare const getStdin: {
 	@example
 	```
 	// example.ts
-	import getStdin = require('get-stdin');
+	import getStdin = require('get-stdin-with-tty');
 
 	(async () => {
 		console.log(await getStdin({ tty: true }));
