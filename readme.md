@@ -1,7 +1,7 @@
 # @prantlf/get-stdin-with-tty
 
 [![NPM version](https://img.shields.io/npm/v/%40prantlf%2Fget-stdin-with-tty.svg)](https://www.npmjs.com/package/@prantlf/get-stdin-with-tty)
-[![Build Status](https://travis-ci.org/prantlf/get-stdin.svg?branch=master)](https://travis-ci.org/prantlf/get-stdin)
+[![Build Status](https://travis-ci.org/prantlf/get-stdin-with-tty.svg?branch=master)](https://travis-ci.org/prantlf/get-stdin-with-tty)
 
 > Get [stdin](https://nodejs.org/api/process.html#process_process_stdin) as a string or buffer
 
