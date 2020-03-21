@@ -1,21 +1,23 @@
-# get-stdin-with-tty
+# @prantlf/get-stdin-with-tty
 
-[![NPM version](https://img.shields.io/npm/v/get-stdin.svg)](https://www.npmjs.com/package/get-stdin-with-tty)
-[![Build Status](https://travis-ci.org/moos/get-stdin.svg?branch=master)](https://travis-ci.org/moos/get-stdin)
+[![NPM version](https://img.shields.io/npm/v/%40prantlf%2Fget-stdin-with-tty.svg)](https://www.npmjs.com/package/@prantlf/get-stdin-with-tty)
+[![Build Status](https://travis-ci.org/prantlf/get-stdin.svg?branch=master)](https://travis-ci.org/prantlf/get-stdin)
 
 > Get [stdin](https://nodejs.org/api/process.html#process_process_stdin) as a string or buffer
+
+This fork of the [original project](https://github.com/sindresorhus/get-stdin) includes support for reading stdin from TTY, not only via pipes.
 
 ## Install
 
 ```
-$ npm install get-stdin-with-tty
+$ npm install @prantlf/get-stdin-with-tty
 ```
 
 ## Usage
 
 ```js
 // example.js
-const getStdin = require('get-stdin-with-tty');
+const getStdin = require('@prantlf/get-stdin-with-tty');
 
 (async () => {
 	console.log(await getStdin({ tty: true }));
@@ -60,10 +62,6 @@ foobar
 barfoo
 ```
 
-## Moos Fork
-
-The [moos fork](https://github.com/moos/get-stdin) includes support for reading stdin from TTY by default.
-
 ## Related
 
 - [get-stream](https://github.com/sindresorhus/get-stream) - Get a stream as a string or buffer
@@ -72,3 +70,4 @@ The [moos fork](https://github.com/moos/get-stdin) includes support for reading 
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
 © [Moos](http://github.com/moos)
+© [Ferdinand Prantl](github.com/prantlf)
